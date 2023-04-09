@@ -3,7 +3,6 @@ import { createSlice } from '@reduxjs/toolkit';
 import { removeUserAction, setUserAction } from './actions';
 import initialState from './initialState';
 
-
 export const userSlice = createSlice({
   name: 'user',
   initialState,

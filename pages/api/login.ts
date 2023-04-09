@@ -5,7 +5,7 @@ import crypto from 'crypto';
 const user = {
   id: 1,
   username: 'exampleuser',
-  email: 'exampleuser@example.com'
+  email: 'exampleuser@example.com',
 };
 
 const token = crypto.createHash('md5').update(String(user)).digest('hex');

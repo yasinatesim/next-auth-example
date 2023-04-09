@@ -1,5 +1,5 @@
-import {  UserState } from './types';
+import { UserState } from './types';
 
-const initialState: UserState | null =  null;
+const initialState: UserState | null = null;
 
 export default initialState;

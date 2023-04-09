@@ -1,4 +1,3 @@
-
 import { UserState } from './reducers/user/types';
 
 import { AppState } from '@/types/state';

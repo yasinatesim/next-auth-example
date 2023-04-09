@@ -5,9 +5,10 @@ import { useRouter } from 'next/router';
 
 import { useLocalStorage } from '@/hooks';
 
+import { getUserInfo } from '@/services/login';
+
 import { setUser } from '@/store/reducers/user';
 
-import { getUserInfo } from '@/services/login';
 import { Errors } from '@/types/models';
 
 const LoginPage = () => {
@@ -45,11 +46,9 @@ const LoginPage = () => {
     }
 
     // Login API call
-    const { user, token } = await getUserInfo({ username, password })
+    const { user, token } = await getUserInfo({ username, password });
 
     if (user) {
-
-
       dispatch(setUser(user));
 
       setValue('user_auth_token', token);

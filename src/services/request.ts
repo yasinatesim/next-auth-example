@@ -24,16 +24,16 @@ class Request {
     });
 
     return data;
-	};
+  };
 
-	post = async <T>(dest: string, body = {}, config: Partial<AxiosRequestConfig> = {}): Promise<T> => {
-		const { data } = await this.instance.post<T>(dest, body, {
-			...config,
-			headers: getBaseHeaders(config.headers),
-		});
+  post = async <T>(dest: string, body = {}, config: Partial<AxiosRequestConfig> = {}): Promise<T> => {
+    const { data } = await this.instance.post<T>(dest, body, {
+      ...config,
+      headers: getBaseHeaders(config.headers),
+    });
 
-		return data;
-	}
+    return data;
+  };
 }
 
 export default new Request();
