@@ -1,5 +1,6 @@
-import { CounterState } from './reducers/counter/types';
+
+import { UserState } from './reducers/user/types';
 
 import { AppState } from '@/types/state';
 
-export const getCount = (state: AppState): CounterState => state.counter;
+export const getUser = (state: AppState): UserState => state.user;

@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import counter from '@/store/reducers/counter';
+import user from '@/store/reducers/user';
 
 export const store = configureStore({
   reducer: {
-    counter,
+    user,
   },
 
   middleware: (getDefaultMiddleware) =>

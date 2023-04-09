@@ -1,5 +1,5 @@
-import { CounterState } from '@/store/reducers/counter/types';
+import { UserState } from '@/store/reducers/user/types';
 
 export type AppState = {
-  counter: CounterState;
+  user: UserState;
 };
