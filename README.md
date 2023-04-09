@@ -1,20 +1,19 @@
 <h3 align="center">
-  <br>
-  <a href="https://github.com/yasinatesim/next-starter-kit"><img src="https://yasinates.com/tech/next.svg" alt="Next Starter Kit" width="200"></a>
-  <br>
-  Next Starter Kit
-  <br>
+<br>
+<a href="https://github.com/yasinatesim/next-auth-example"><img src="https://yasinates.com/tech/react.svg" alt="Next Auth Example" width="200"></a>
+<br>
+Next Auth Example
+<br>
 </h3>
 
 <hr>
 
-<p  align="center">This project is a starter kit for develop the front-end web applications with Next.js 😎</p>
+<p  align="center">This project is a simple authentication example built with Next.js, TypeScript 🔒</p>
 
 ## 📖 About
 
-  <img width="500" src="https://yasinates.com/next-starter-kit.jpg">
 
-This project is a starter kit for develop the front-end web applications with Next.js 😎
+This project is a simple authentication example built with Next.js, TypeScript  🔒
 
 ### 📚Tech Stack
 
@@ -125,7 +124,7 @@ This project is a starter kit for develop the front-end web applications with Ne
 
 ```bash
 
-git clone https://github.com/yasinatesim/next-starter-kit.git
+git clone https://github.com/yasinatesim/next-auth-example.git
 
 ```
 
