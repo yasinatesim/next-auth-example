@@ -12,8 +12,8 @@ import { setUser } from '@/store/reducers/user';
 import { Errors } from '@/types/models';
 
 const LoginPage = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('exampleuser');
+  const [password, setPassword] = useState('123123abc');
   const [errors, setErrors] = useState<Errors>({});
   const dispatch = useDispatch();
   const router = useRouter();
@@ -45,34 +45,42 @@ const LoginPage = () => {
       return;
     }
 
-    // Login API call
-    const { user, token } = await getUserInfo({ username, password });
+    try {
+      const { user, token } = await getUserInfo({ username, password });
 
-    if (user) {
-      dispatch(setUser(user));
+      if (user) {
+        dispatch(setUser(user));
 
-      setValue('user_auth_token', token);
+        setValue('user_auth_token', token);
 
-      router.push('/');
-    } else {
-      setErrors({ general: 'Invalid credentials' });
+        router.push('/');
+      } else {
+        setErrors({ general: 'Invalid credentials' });
+      }
+    } catch (err: any) {
+      console.error(err);
+      setErrors({ general: err.message });
     }
   };
 
   return (
     <form onSubmit={handleFormSubmit}>
-      <label>
-        Username:
-        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+      <div>
+        <label htmlFor="username">Username:</label>
+        <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
         {errors.username && <span style={{ color: 'red' }}>{errors.username}</span>}
-      </label>
-      <label>
-        Password:
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+      </div>
+
+      <div>
+        <label htmlFor="password">Password:</label>
+        <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         {errors.password && <span style={{ color: 'red' }}>{errors.password}</span>}
-      </label>
-      {errors.general && <span style={{ color: 'red' }}>{errors.general}</span>}
+      </div>
+
       <button type="submit">Login</button>
+      <br />
+      <br />
+      <div>{errors.general && <span style={{ color: 'red' }}>{errors.general}</span>}</div>
     </form>
   );
 };

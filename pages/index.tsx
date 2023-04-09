@@ -57,7 +57,7 @@ const Home: NextPage = () => {
       </Head>
 
       <div>
-        <h1>Hoş geldin {user.id}</h1>
+        <h1>Hoş geldin {user.username}</h1>
       </div>
 
       <div>
