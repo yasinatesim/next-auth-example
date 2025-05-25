@@ -13,7 +13,7 @@ Next Auth Example
 
 
   <p align="center">
-· <a  href="https://next-auth-example.yasinatesim.vercel.app/">View Demo</a>
+· <a  href="https://next-auth-example.yasinates.com">View Demo</a>
   </p>
 
 
